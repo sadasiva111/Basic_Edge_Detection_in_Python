@@ -17,12 +17,10 @@ new_pixel_values = [[0 for i in range(numb_colns)] for j in range(numb_rows)]
 mask = ((-1, 0, 1), (-2, 0, 2), (-1, 0, 1))
 
 
-# mask2 = ((-1, -1, -1), (-1, 8, -1), (-1, -1, -1))
 
 
 # Implement a function to slice a part from the image as a 2D list
 def get_slice_2d_list(pixel_values, i, j):
-    # print([[pixel_values[ti][tj] for ti in range(i-1, i+2)] for tj in range(j-1, j+2)])
     return [pixel_values[row][j-1: j+2] for row in range(i-1, i+2)]
     # return np.asarray(pixel_values)[i - 1:i + 2, j - 1:j + 2]
 
